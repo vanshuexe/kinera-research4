@@ -1,0 +1,6 @@
+{
+  "name": "Kinera Research",
+  "description": "Full-picture research and analytics for teams making high-stakes decisions in health and consumer markets. Consumer & patient intelligence built around the decision, not the deliverable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
