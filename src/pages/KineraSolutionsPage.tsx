@@ -64,7 +64,7 @@ export const KineraSolutionsPage: React.FC<{
   return (
     <div className="bg-[#FAF8F5] min-h-screen pt-20">
       {/* Solutions Hero */}
-      <section className="pt-24 pb-20 border-b border-[#EAE6DC] bg-[#FAF8F5]">
+      <section className="pt-20 sm:pt-24 pb-16 sm:pb-20 border-b border-[#EAE6DC] bg-[#FAF8F5] reveal-on-scroll">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-[11px] font-bold text-[#C84B31] tracking-[0.25em] uppercase font-sans-clean block flex items-center justify-center gap-2 mb-6">
             <span className="w-8 h-px bg-[#C84B31]" /> OUR SOLUTIONS <span className="w-8 h-px bg-[#C84B31]" />
@@ -79,12 +79,12 @@ export const KineraSolutionsPage: React.FC<{
       </section>
 
       {/* Solutions Detailed List */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+      <section className="py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-32 reveal-on-scroll">
           {SOLUTIONS_LIST.map((sol, index) => (
             <div 
               key={sol.id} 
-              className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start border-t border-[#EAE6DC] pt-16 first:border-0 first:pt-0 animate-fade-in-up"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-24 items-start border-t border-[#EAE6DC] pt-12 sm:pt-16 first:border-0 first:pt-0 animate-fade-in-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               
@@ -123,8 +123,8 @@ export const KineraSolutionsPage: React.FC<{
               </div>
 
               {/* Right Side: Deep Details */}
-              <div className="lg:col-span-8 bg-white border border-[#EAE6DC] p-8 lg:p-12 rounded-xl shadow-premium hover:shadow-premium-hover transition-shadow duration-500">
-                <div className="space-y-12">
+              <div className="lg:col-span-8 bg-white border border-[#EAE6DC] p-6 sm:p-8 lg:p-12 rounded-xl shadow-premium hover:shadow-premium-hover transition-shadow duration-500">
+                <div className="space-y-10 sm:space-y-12">
                   
                   {/* Overview */}
                   <div>

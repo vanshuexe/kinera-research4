@@ -12,7 +12,7 @@ export const KineraInsightsPage: React.FC<{
   return (
     <div className="bg-[#FAF8F5] min-h-screen pt-20">
       {/* Insights Hero */}
-      <section className="pt-24 pb-20 border-b border-[#EAE6DC] bg-white relative overflow-hidden">
+      <section className="pt-20 sm:pt-24 pb-16 sm:pb-20 border-b border-[#EAE6DC] bg-white relative overflow-hidden reveal-on-scroll">
         {/* Subtle mesh background element */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#EAE6DC]/30 to-transparent rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2" />
         
@@ -30,8 +30,8 @@ export const KineraInsightsPage: React.FC<{
       </section>
 
       {/* Insights List */}
-      <section className="py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="py-16 sm:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12 reveal-on-scroll">
           {INSIGHTS_LIST.map((insight, index) => {
             return (
               <div 
@@ -56,8 +56,8 @@ export const KineraInsightsPage: React.FC<{
                 </div>
 
                 {/* Content Area */}
-                <div className="flex flex-col flex-grow bg-white group-hover:bg-[#FAF8F5] transition-colors duration-500 p-8 md:p-10">
-                  <h2 className="font-sans-clean font-bold text-slate-950 mb-4 group-hover:text-[#C84B31] transition-colors duration-300 leading-snug text-2xl md:text-3xl">
+                <div className="flex flex-col flex-grow bg-white group-hover:bg-[#FAF8F5] transition-colors duration-500 p-6 sm:p-8 md:p-10">
+                  <h2 className="font-sans-clean font-bold text-slate-950 mb-4 group-hover:text-[#C84B31] transition-colors duration-300 leading-snug text-xl sm:text-2xl md:text-3xl">
                     {insight.title}
                   </h2>
                   

@@ -23,6 +23,32 @@ export default function App() {
   const [selectedInsight, setSelectedInsight] = useState<InsightArticle | null>(null);
   const [aboutModalOpen, setAboutModalOpen] = useState(false);
 
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+        } else {
+          entry.target.classList.remove('is-revealed');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    const timeout = setTimeout(() => {
+      // Automatically apply to all sections for full-site scroll animations
+      const elements = document.querySelectorAll('section, .reveal-on-scroll');
+      elements.forEach((el) => {
+        el.classList.add('reveal-on-scroll'); // Ensure the base class is there
+        observer.observe(el);
+      });
+    }, 100);
+
+    return () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, [currentPage]);
+
   const handleNavigate = (sectionId: string) => {
     if (sectionId === 'solutions-page') {
       setCurrentPage('solutions');

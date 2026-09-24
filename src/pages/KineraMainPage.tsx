@@ -116,30 +116,30 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
               </div>
 
               {/* Headline */}
-              <div className="space-y-4">
-                <h1 className="text-[42px] sm:text-5xl lg:text-[54px] font-sans-clean font-semibold text-slate-950 leading-[1.06] tracking-tight">
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-sans-clean font-semibold text-slate-950 leading-[1.1] tracking-tight">
                   Every signal tells part of the story.
                 </h1>
-                <p className="text-[42px] sm:text-5xl lg:text-[54px] font-sans-clean font-semibold leading-[1.06] tracking-tight">
+                <p className="text-4xl sm:text-5xl lg:text-[54px] font-sans-clean font-semibold leading-[1.1] tracking-tight">
                   <span className="text-[#C84B31]">We connect them all.</span>
                 </p>
               </div>
 
               {/* Body */}
-              <p className="text-base text-slate-600 max-w-lg font-normal leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-600 max-w-lg font-normal leading-relaxed">
                 Kinera synthesizes surveys, EHR claims, physician discourse, registries, and telemetry into a single decision-ready picture — built for pharma, healthcare, and consumer leaders who need evidence clarity over speculation.
               </p>
 
               {/* Inline data proof strip */}
-              <div className="flex flex-wrap gap-x-8 gap-y-4">
+              <div className="flex flex-wrap gap-x-6 gap-y-4">
                 {[
                   { value: '1.2M+', label: 'Patient records' },
                   { value: '9,400+', label: 'Verified HCP panel' },
                   { value: '75+', label: 'Clinical registries' },
                 ].map(({ value, label }) => (
                   <div key={label}>
-                    <div className="text-xl font-bold text-slate-950 font-sans-clean">{value}</div>
-                    <div className="text-xs text-slate-500 font-medium mt-0.5">{label}</div>
+                    <div className="text-lg sm:text-xl font-bold text-slate-950 font-sans-clean">{value}</div>
+                    <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5">{label}</div>
                   </div>
                 ))}
               </div>
@@ -148,44 +148,44 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <button
                   onClick={() => onOpenProjectModal()}
-                  className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-[#111625] hover:bg-[#1f2b47] active:scale-95 transition-all shadow-md shadow-[#111625]/20 cursor-pointer"
+                  className="group inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#111625] hover:bg-[#1f2b47] active:scale-95 transition-all shadow-md shadow-[#111625]/20 cursor-pointer"
                 >
                   Talk to our team
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
                 <button
                   onClick={() => scrollToSection('approach')}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-slate-700 bg-white border border-[#DDD7C9] hover:border-slate-400 hover:bg-white transition-all shadow-sm cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-semibold text-slate-700 bg-white border border-[#DDD7C9] hover:border-slate-400 hover:bg-white transition-all shadow-sm cursor-pointer"
                 >
                   See our method
                 </button>
               </div>
 
               {/* Social proof */}
-              <div className="pt-6 border-t border-[#EAE6DC] flex items-center gap-4">
+              <div className="pt-6 border-t border-[#EAE6DC] flex items-center gap-3 sm:gap-4">
                 <div className="flex -space-x-2.5">
                   {[11, 12, 13, 14].map((i) => (
                     <img
                       key={i}
                       src={`https://i.pravatar.cc/80?img=${i}`}
                       alt=""
-                      className="w-8 h-8 rounded-full border-2 border-[#FAF8F5] object-cover shadow-sm"
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-2 border-[#FAF8F5] object-cover shadow-sm"
                     />
                   ))}
                 </div>
-                <p className="text-xs text-slate-500">
+                <p className="text-[10px] sm:text-xs text-slate-500 max-w-[200px] sm:max-w-none">
                   Trusted by <span className="font-semibold text-slate-800">insight & strategy teams</span> at 50+ leading healthcare organizations
                 </p>
               </div>
             </div>
 
-            {/* ── RIGHT: Interactive Stacked Cards ── */}
-            <div className="hidden lg:flex items-center justify-center py-16 pl-8 relative">
-              <div className="absolute left-0 top-20 bottom-20 w-px bg-gradient-to-b from-transparent via-[#EAE6DC] to-transparent" />
+            {/* ── RIGHT: Interactive Stacked Cards (Now visible on mobile) ── */}
+            <div className="flex items-center justify-center py-10 lg:py-16 lg:pl-8 relative w-full overflow-hidden">
+              <div className="hidden lg:block absolute left-0 top-20 bottom-20 w-px bg-gradient-to-b from-transparent via-[#EAE6DC] to-transparent" />
 
-              <div className="flex flex-col items-center gap-5">
+              <div className="flex flex-col items-center gap-5 w-full">
                 {/* Card stack */}
-                <div className="relative w-[380px] h-[440px]">
+                <div className="relative w-full max-w-[320px] sm:max-w-[380px] h-[380px] sm:h-[440px]">
 
                   {/* ── CARD 3: Global Markets (dark navy) ── */}
                   {(() => {
@@ -346,7 +346,7 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
 
 
       {/* 2. TRUSTED BY CLIENTS */}
-      <section className="py-14 border-b border-[#EAE6DC] bg-[#FAF8F5] overflow-hidden">
+      <section className="py-14 border-b border-[#EAE6DC] bg-[#FAF8F5] overflow-hidden reveal-on-scroll">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
           <div className="flex items-center justify-center gap-3">
             <div className="h-px flex-1 max-w-[80px] bg-gradient-to-r from-transparent to-[#DDD7C9]" />
@@ -385,7 +385,7 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
       </section>
 
       {/* 3. METRICS STATS BAR */}
-      <section className="bg-[#EFF3EB] border-b border-[#E0E7DC] py-14">
+      <section className="bg-[#EFF3EB] border-b border-[#E0E7DC] py-14 reveal-on-scroll" style={{ transitionDelay: '100ms' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 divide-y lg:divide-y-0 lg:divide-x divide-[#DCE4D6]">
             {STATS_METRICS.map((stat, idx) => (
@@ -406,7 +406,7 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
       </section>
 
       {/* 4. WHAT WE DO (SOLUTIONS) */}
-      <section id="solutions" className="py-24 border-b border-[#EAE6DC]">
+      <section id="solutions" className="py-24 border-b border-[#EAE6DC] reveal-on-scroll">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
           
           {/* Section Header with Custom SVG Badge */}
@@ -479,7 +479,7 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
       </section>
 
       {/* 5. THE KINERA METHOD (APPROACH) */}
-      <section id="approach" className="bg-[#FAF8F5] text-slate-950 py-28 border-b border-[#EAE6DC] relative overflow-hidden">
+      <section id="approach" className="bg-[#FAF8F5] text-slate-950 py-28 border-b border-[#EAE6DC] relative overflow-hidden reveal-on-scroll">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-[0.3]" style={{ backgroundImage: 'repeating-linear-gradient(0deg,#EAE6DC 0px,#EAE6DC 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,#EAE6DC 0px,#EAE6DC 1px,transparent 1px,transparent 60px)' }} />
 
@@ -639,7 +639,7 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
       </section>
 
       {/* 7. LATEST THINKING (INSIGHTS) */}
-      <section id="insights" className="py-28 border-b border-[#EAE6DC] bg-white relative overflow-hidden">
+      <section id="insights" className="py-28 border-b border-[#EAE6DC] bg-white relative overflow-hidden reveal-on-scroll">
         {/* Decorative background element */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-[#FAF8F5] to-transparent rounded-full blur-3xl opacity-50 pointer-events-none transform translate-x-1/3 -translate-y-1/3" />
 
@@ -734,7 +734,7 @@ export const KineraMainPage: React.FC<KineraMainPageProps> = ({
       </section>
 
       {/* 8. LET'S TALK (CALL TO ACTION) */}
-      <section id="contact" className="py-24 bg-[#FAF8F5]">
+      <section id="contact" className="py-24 bg-[#FAF8F5] reveal-on-scroll">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           
           <span className="text-[11px] font-bold text-slate-500 tracking-[0.2em] uppercase font-sans-clean block">

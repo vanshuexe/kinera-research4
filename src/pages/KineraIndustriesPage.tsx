@@ -8,7 +8,7 @@ export const KineraIndustriesPage: React.FC<{
   return (
     <div className="bg-[#FAF8F5] min-h-screen pt-20">
       {/* Industries Hero */}
-      <section className="pt-24 pb-20 border-b border-[#EAE6DC] bg-white">
+      <section className="pt-20 sm:pt-24 pb-16 sm:pb-20 border-b border-[#EAE6DC] bg-white reveal-on-scroll">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-[11px] font-bold text-[#C84B31] tracking-[0.25em] uppercase font-sans-clean block flex items-center justify-center gap-2 mb-6 animate-fade-in-up">
             <span className="w-8 h-px bg-[#C84B31]" /> EXPERTISE <span className="w-8 h-px bg-[#C84B31]" />
@@ -23,14 +23,13 @@ export const KineraIndustriesPage: React.FC<{
       </section>
 
       {/* Industries Grid */}
-      <section className="py-24">
+      <section className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal-on-scroll">
             {INDUSTRIES_LIST.map((industry, index) => (
               <div 
                 key={industry.id}
-                className="group flex flex-col bg-white border border-[#EAE6DC] p-8 md:p-10 hover:bg-[#111625] hover:border-[#111625] hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 animate-fade-in-up overflow-hidden relative"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group flex flex-col bg-white border border-[#EAE6DC] p-6 sm:p-8 md:p-10 hover:bg-[#111625] hover:border-[#111625] hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden relative"
               >
                 {/* Decorative Hover Line */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#C84B31] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out" />

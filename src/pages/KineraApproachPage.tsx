@@ -8,7 +8,7 @@ export const KineraApproachPage: React.FC<{
   return (
     <div className="bg-[#FAF8F5] min-h-screen pt-20">
       {/* Approach Hero */}
-      <section className="pt-24 pb-20 border-b border-[#EAE6DC] relative overflow-hidden">
+      <section className="pt-20 sm:pt-24 pb-16 sm:pb-20 border-b border-[#EAE6DC] relative overflow-hidden">
         {/* Subtle grid pattern background */}
         <div className="absolute inset-0 opacity-[0.4]" style={{ backgroundImage: 'repeating-linear-gradient(0deg,#EAE6DC 0px,#EAE6DC 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,#EAE6DC 0px,#EAE6DC 1px,transparent 1px,transparent 60px)' }} />
 
@@ -32,10 +32,10 @@ export const KineraApproachPage: React.FC<{
       </section>
 
       {/* The Timeline / Steps */}
-      <section className="py-24 relative">
+      <section className="py-16 sm:py-24 relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="space-y-24 relative">
+          <div className="space-y-16 sm:space-y-24 relative">
             {/* Central Vertical Line for Desktop */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#EAE6DC] -translate-x-1/2 z-0" />
 
@@ -82,7 +82,7 @@ export const KineraApproachPage: React.FC<{
       </section>
 
       {/* The Kinera Standard (Core Principles) */}
-      <section className="py-24 bg-white border-t border-[#EAE6DC]">
+      <section className="py-24 bg-white border-t border-[#EAE6DC] reveal-on-scroll">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="max-w-2xl">
             <span className="text-[11px] font-bold text-slate-500 tracking-[0.2em] uppercase font-sans-clean block mb-3">
